@@ -32,7 +32,7 @@ export default class Main extends Component {
             <p>{structure.description}</p>
             <p>{structure.date}</p>
             <a href={structure.url}>Acessar</a>
-            <a onClick={() => this.excludeStructures(structure._id)}>Feito!</a>
+            <a href={() => this.excludeStructures(structure._id)}>Feito!</a>
           </article>
         ))}
       </div>
