@@ -4,7 +4,7 @@ import api from "../../services/api.js";
 
 import "./styles.css";
 
-var Confirm = require("react-confirm-bootstrap");
+const Confirm = require("react-confirm-bootstrap");
 
 export default class Main extends Component {
   state = {
@@ -37,7 +37,7 @@ export default class Main extends Component {
             <a href={structure.url}>Acessar</a>
             <button
               title="Feito"
-              onClick={
+              onClick={() => (
                 <Confirm
                   onConfirm={this.excludeStructures(structure._id)}
                   body="Tem certeza que você deseja excluir?"
@@ -46,10 +46,8 @@ export default class Main extends Component {
                 >
                   <button>Deletar</button>
                 </Confirm>
-              }
-            >
-              Feito
-            </button>
+              )}
+            />
           </article>
         ))}
       </div>
