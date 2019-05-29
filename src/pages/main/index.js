@@ -30,7 +30,7 @@ export default class Main extends Component {
       body="Tem certeza que você deseja excluir?"
       confirmText="Confirmar"
       title="Deletar tarefa"
-      onConfirm={await this.excludeStructures(this.structure._id)}
+      onConfirm={await this.excludeStructures(id)}
     >
       <button>Deletar</button>
     </Confirm>;
