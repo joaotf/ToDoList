@@ -48,7 +48,9 @@ export default class Main extends Component {
             <button
               title="Feito"
               onClick={() => this.renderizar(structure._id)}
-            />
+            >
+              Feito
+            </button>
           </article>
         ))}
       </div>
