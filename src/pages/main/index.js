@@ -45,7 +45,10 @@ export default class Main extends Component {
             <p>{structure.description}</p>
             <p>{structure.date}</p>
             <a href={structure.url}>Acessar</a>
-            <button title="Feito" onClick={this.renderizar(structure._id)} />
+            <button
+              title="Feito"
+              onClick={() => this.renderizar(structure._id)}
+            />
           </article>
         ))}
       </div>
