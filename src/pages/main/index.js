@@ -35,14 +35,16 @@ export default class Main extends Component {
             <p>{structure.description}</p>
             <p>{structure.date}</p>
             <a href={structure.url}>Acessar</a>
-            <Confirm
-              onConfirm={this.excludeStructures(structure._id)}
-              body="Tem certeza que você deseja excluir?"
-              confirmText="Confirmar"
-              title="Deletar tarefa"
-            >
-              <button>Deletar</button>
-            </Confirm>
+            <button title="Feito">
+              <Confirm
+                onConfirm={this.excludeStructures(structure._id)}
+                body="Tem certeza que você deseja excluir?"
+                confirmText="Confirmar"
+                title="Deletar tarefa"
+              >
+                <button>Deletar</button>
+              </Confirm>
+            </button>
           </article>
         ))}
       </div>
