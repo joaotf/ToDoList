@@ -25,16 +25,17 @@ export default class Main extends Component {
     const response = await api.delete("/usuario/" + id);
     this.loadStructures();
   };
-  renderizar = async id => {
+
+  render(id) {
     <Confirm
       body="Tem certeza que você deseja excluir?"
       confirmText="Confirmar"
       title="Deletar tarefa"
-      onConfirm={await this.excludeStructures(id)}
+      onConfirm={this.excludeStructures(id)}
     >
       <button>Deletar</button>
     </Confirm>;
-  };
+  }
 
   render() {
     return (
@@ -45,10 +46,7 @@ export default class Main extends Component {
             <p>{structure.description}</p>
             <p>{structure.date}</p>
             <a href={structure.url}>Acessar</a>
-            <button
-              title="Feito"
-              onClick={() => this.renderizar(structure._id)}
-            >
+            <button title="Feito" onClick={() => this.render(structure._id)}>
               Feito
             </button>
           </article>
