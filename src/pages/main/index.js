@@ -47,7 +47,9 @@ export default class Main extends Component {
                   <button>Deletar</button>
                 </Confirm>
               }
-            />
+            >
+              Feito
+            </button>
           </article>
         ))}
       </div>
