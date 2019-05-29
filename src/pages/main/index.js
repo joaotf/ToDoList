@@ -39,10 +39,10 @@ export default class Main extends Component {
               title="Feito"
               onClick={() => (
                 <Confirm
-                  onConfirm={this.excludeStructures(structure._id)}
                   body="Tem certeza que você deseja excluir?"
                   confirmText="Confirmar"
                   title="Deletar tarefa"
+                  onConfirm={this.excludeStructures(structure._id)}
                 >
                   <button>Deletar</button>
                 </Confirm>
