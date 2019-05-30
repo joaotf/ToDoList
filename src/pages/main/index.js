@@ -23,7 +23,7 @@ export default class Main extends Component {
   };
 
   excludeStructures = async id => {
-    const response = await api.delete("/usuario/" + id);
+    await api.delete("/usuario/" + id);
     this.loadStructures();
     alert("Tarefa excluída com sucesso!");
   };
