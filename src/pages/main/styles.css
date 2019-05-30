@@ -4,7 +4,7 @@
   padding: 0 20px;
 }
 .list-all article {
-  background: #E6E6FA;
+  background: #e6e6fa;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
@@ -21,7 +21,7 @@
 
 .list-all article a {
   height: 42px;
- 
+
   border-radius: 20px;
   border: 2px solid #1e90ff;
   background: none;
@@ -33,7 +33,7 @@
   text-decoration: none;
   justify-content: center;
   text-align: center;
-  
+
   justify-content: center;
   align-items: center;
   transition: all 0.2s;
@@ -65,5 +65,3 @@
   background: #ff1e1e;
   color: #fff;
 }
-
-

@@ -2,41 +2,34 @@ import React, { Component } from "react";
 
 import api from "../../services/api.js";
 
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 import "./styles.css";
 
-
-
-  
 export default class Main extends Component {
   state = {
     structures: []
   };
 
- 
   componentDidMount() {
     this.loadStructures();
-}
-
+  }
 
   loadStructures = async () => {
     const response = await api.get("/usuario");
 
     this.setState({ structures: response.data });
     this.loadStructures();
-  }
+  };
 
   excludeStructures = async id => {
     const response = await api.delete("/usuario/" + id);
     this.loadStructures();
-    alert("Tarefa excluída com sucesso!")
-  }
-
+    alert("Tarefa excluída com sucesso!");
+  };
 
   render() {
     return (
-      
       <div className="list-all">
         <Link to="/add">Adicionar tarefa!</Link>
         <br />
@@ -47,15 +40,15 @@ export default class Main extends Component {
             <p>{structure.description}</p>
             <p>{structure.date}</p>
             <a href={structure.url}>Acessar</a>
-            <button title="Feito" onClick={() => this.excludeStructures(structure._id)}>
+            <a
+              title="Feito"
+              onClick={() => this.excludeStructures(structure._id)}
+            >
               Feito
-            </button>
-      
+            </a>
           </article>
-          
         ))}
       </div>
-    
     );
   }
 }
