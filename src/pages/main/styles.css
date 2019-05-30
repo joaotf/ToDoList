@@ -4,11 +4,13 @@
   padding: 0 20px;
 }
 .list-all article {
-  background: #fff;
+  background: #E6E6FA;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
   margin-bottom: 20px;
+  justify-content: center;
+  text-align: center;
 }
 .list-all article p {
   font-size: 16px;
@@ -19,15 +21,19 @@
 
 .list-all article a {
   height: 42px;
-  border-radius: 5px;
+ 
+  border-radius: 20px;
   border: 2px solid #1e90ff;
   background: none;
   margin-top: 10px;
   color: #1e90ff;
+  display: flex;
   font-weight: bold;
   font-size: 16px;
   text-decoration: none;
-  display: flex;
+  justify-content: center;
+  text-align: center;
+  
   justify-content: center;
   align-items: center;
   transition: all 0.2s;
@@ -40,11 +46,12 @@
 
 .list-all article button {
   height: 42px;
-  border-radius: 5px;
-  border: 2px solid #1e90ff;
+  width: 657px;
+  border-radius: 20px;
+  border: 2px solid #ff1e1e;
   background: none;
   margin-top: 10px;
-  color: #1e90ff;
+  color: #ff1e1e;
   font-weight: bold;
   font-size: 16px;
   text-decoration: none;
@@ -55,6 +62,8 @@
 }
 
 .list-all article button:hover {
-  background: #1e90ff;
+  background: #ff1e1e;
   color: #fff;
 }
+
+
