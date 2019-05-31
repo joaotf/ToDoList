@@ -10,11 +10,7 @@ export default class Update extends Component {
 
   editStructure = async () => {
     let doidao = window.location.pathname.split("/");
-    let doidao2 = doidao[1];
-
-    console.log(doidao)
-    console.log(doidao2)
-
+    let doidao2 = doidao[2];
 
     await api.put(`/usuario/${doidao2}`, {
       nome: document.getElementById("nome").value,
