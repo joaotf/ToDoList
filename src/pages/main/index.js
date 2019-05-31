@@ -26,7 +26,6 @@ export default class Main extends Component {
   excludeStructures = async id => {
     await api.delete("/usuario/" + id);
     this.loadStructures();
-    alert("Tarefa excluída com sucesso!");
   };
 
   render() {
@@ -47,6 +46,7 @@ export default class Main extends Component {
             >
               Feito
             </a>
+            <Link to={`/update/:${structure._id}`}>Editar</Link>
           </article>
         ))}
       </div>

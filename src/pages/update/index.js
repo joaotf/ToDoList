@@ -1,32 +1,43 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 
 import api from "../../services/api.js";
+import { Link } from "react-router-dom";
 
-
-
-
-
-  
 export default class Update extends Component {
-    
-state = {
+  state = {
     structures: []
-};
-    
+  };
+
+  editStructure = async (req, res) => {
+    await api.put(`/usuario/${req.body._id}`, {
+      nome: document.getElementById("nome").value,
+      description: document.getElementById("des").value,
+      date: document.getElementById("dde").value,
+      url: document.getElementById("url").value
+    });
+    alert("Tarefa editada com sucesso!");
+  };
+
   render() {
     return (
-        <div className="update-work">
-            <h2>Adicionar tarefa</h2>
-            <input placeholder="Nome" required ></input>
-            <br />
-            <input placeholder="Descrição" required ></input>
-            <br />
-            <input placeholder="Data de Entrega" required ></input>
-            <br />
-            <input placeholder="URL" required ></input>
-            <br />
-            <button>Adicionar</button>
-        </div>
-        )
-    }
+      <div className="work">
+        <h2>Adicionar tarefa</h2>
+        <input id="nome" name="nome" placeholder="Nome" />
+        <br />
+        <br />
+        <input id="des" name="description" placeholder="Descrição" />
+        <br />
+        <br />
+        <input id="dde" name="dde" placeholder="Data de Entrega" />
+        <br />
+        <br />
+        <input id="url" name="url" placeholder="URL" />
+        <br />
+        <br />
+        <Link to="/" onClick={() => this.createStructure()}>
+          Adicionar
+        </Link>
+      </div>
+    );
+  }
 }
