@@ -20,8 +20,8 @@ export default class Update extends Component {
 
   render() {
     return (
-      <div className="work">
-        <h2>Adicionar tarefa</h2>
+      <div className="update-work">
+        <h2>Editar tarefa</h2>
         <input id="nome" name="nome" placeholder="Nome" />
         <br />
         <br />
@@ -34,8 +34,8 @@ export default class Update extends Component {
         <input id="url" name="url" placeholder="URL" />
         <br />
         <br />
-        <Link to="/" onClick={() => this.createStructure()}>
-          Adicionar
+        <Link to="/" onClick={() => this.editStructure()}>
+          Editar
         </Link>
       </div>
     );
