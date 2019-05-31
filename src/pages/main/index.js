@@ -20,6 +20,7 @@ export default class Main extends Component {
 
     this.setState({ structures: response.data });
     this.loadStructures();
+    alert("Todas as tarefas foram carregadas");
   };
 
   excludeStructures = async id => {

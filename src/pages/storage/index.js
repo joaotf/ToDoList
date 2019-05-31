@@ -15,6 +15,7 @@ export default class Storage extends Component {
       date: document.getElementById("dde").value,
       url: document.getElementById("url").value
     });
+    alert("Tarefa cadastrada com sucesso!");
   };
 
   render() {
@@ -33,10 +34,9 @@ export default class Storage extends Component {
         <input id="url" name="url" placeholder="URL" />
         <br />
         <br />
-        <button onClick={() => this.createStructure()}>Adicionar</button>
-        <br />
-        <br />
-        <Link to="/">Voltar</Link>
+        <Link to="/" onClick={() => this.createStructure()}>
+          Adicionar
+        </Link>
       </div>
     );
   }
