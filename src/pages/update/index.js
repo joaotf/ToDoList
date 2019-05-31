@@ -13,7 +13,7 @@ export default class Update extends Component {
     let doidao2 = doidao[2];
 
     await api.put(`/usuario/${doidao2}`, {
-      nome: document.getElementById("nome").value,
+      title: document.getElementById("nome").value,
       description: document.getElementById("des").value,
       date: document.getElementById("dde").value,
       url: document.getElementById("url").value
