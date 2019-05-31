@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import api from "../../services/api.js";
 
 import { Link } from "react-router-dom";
@@ -10,8 +9,8 @@ export default class Storage extends Component {
   };
 
   createStructure = async () => {
-    const response = await api.post("/usuario", {
-      title: document.getElementById("nome").value,
+    await api.post("/usuario", {
+      nome: document.getElementById("nome").value,
       description: document.getElementById("des").value,
       date: document.getElementById("dde").value,
       url: document.getElementById("url").value
