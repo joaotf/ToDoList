@@ -46,7 +46,7 @@ export default class Main extends Component {
             >
               Feito
             </a>
-            <Link to={`/update/:${structure._id}`}>Editar</Link>
+            <Link to={`/update/${structure._id}`}>Editar</Link>
           </article>
         ))}
       </div>
