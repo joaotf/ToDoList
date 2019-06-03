@@ -41,12 +41,9 @@ export default class Main extends Component {
             <p>{structure.description}</p>
             <p>{structure.date}</p>
             <a href={structure.url}>Acessar</a>
-            <a
-              title="Feito"
-              onClick={() => this.excludeStructures(structure._id)}
-            >
+            <button onClick={() => this.excludeStructures(structure._id)}>
               Feito
-            </a>
+            </button>
             <Link to={`/update/${structure._id}`}>Editar</Link>
           </article>
         ))}
