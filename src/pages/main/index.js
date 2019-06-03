@@ -13,19 +13,19 @@ export default class Main extends Component {
 
   componentDidMount() {
     this.loadStructures();
-    alert("Todas as tarefas foram carregadas");
   }
 
   loadStructures = async () => {
     const response = await api.get("/usuario");
 
     this.setState({ structures: response.data });
-    this.loadStructures();
+    alert("Todas as tarefas foram carregadas");
   };
 
   excludeStructures = async id => {
     await api.delete("/usuario/" + id);
     this.loadStructures();
+    alert("Tarefa excluída com sucesso!");
   };
 
   render() {
@@ -40,12 +40,9 @@ export default class Main extends Component {
             <p>{structure.description}</p>
             <p>{structure.date}</p>
             <a href={structure.url}>Acessar</a>
-            <a
-              title="Feito"
-              onClick={() => this.excludeStructures(structure._id)}
-            >
+            <button onClick={() => this.excludeStructures(structure._id)}>
               Feito
-            </a>
+            </button>
             <Link to={`/update/${structure._id}`}>Editar</Link>
           </article>
         ))}
