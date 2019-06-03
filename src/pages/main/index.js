@@ -26,6 +26,7 @@ export default class Main extends Component {
     await api.delete("/usuario/" + id);
     alert("Tarefa excluída com sucesso!");
     this.loadStructures();
+    alert("Tarefa excluída com sucesso!");
   };
 
   render() {
