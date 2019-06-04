@@ -17,16 +17,13 @@ export default class Main extends Component {
 
   loadStructures = async () => {
     const response = await api.get("/usuario");
-
     this.setState({ structures: response.data });
-    alert("Todas as tarefas foram carregadas");
   };
 
   excludeStructures = async id => {
     await api.delete("/usuario/" + id);
     alert("Tarefa excluída com sucesso!");
     this.loadStructures();
-    alert("Tarefa excluída com sucesso!");
   };
 
   render() {
