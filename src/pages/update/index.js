@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import api from "../../services/api.js";
+import "./styles.css"
 import { Link } from "react-router-dom";
 
 export default class Update extends Component {
@@ -24,7 +25,9 @@ export default class Update extends Component {
   render() {
     return (
       <div className="update-work">
-        <h2>Editar tarefa</h2>
+        <h2 style={{
+          color:"#1e90ff"
+        }}>Editar tarefa</h2>
         <input id="nome" name="nome" placeholder="Nome" />
         <br />
         <br />
@@ -38,7 +41,7 @@ export default class Update extends Component {
         <br />
         <br />
         <Link to="/" onClick={() => this.editStructure()}>
-          Editar
+        <button id="update">Editar</button>
         </Link>
       </div>
     );

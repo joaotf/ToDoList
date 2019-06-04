@@ -1,10 +1,39 @@
+html { 
+  background: url("https://i.pinimg.com/originals/07/39/29/0739296d2617181475101feeac6e695a.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.list-all #adding {
+  height: 42px;
+  
+  border-radius: 20px;
+  border: 2px solid #1e90ff;
+  background: #000000;
+  margin-top: 10px;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+.list-all #adding:hover {
+  background: #1e90ff;
+  color: #fff;
+}
+
 .list-all {
   max-width: 700px;
   margin: 20px auto 0;
   padding: 0 20px;
+  
 }
 .list-all article {
-  background: #e6e6fa;
+  background: #881EE6;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
@@ -14,14 +43,19 @@
 }
 .list-all article p {
   font-size: 16px;
-  color: #999;
+  color: #000000;
+  margin-top: 5px;
+  line-height: 24px;
+}
+.list-all article strong {
+  font-size: 25px;
+  color: #DCDCDC;
   margin-top: 5px;
   line-height: 24px;
 }
 
 .list-all article a {
   height: 42px;
-
   border-radius: 20px;
   border: 2px solid #1e90ff;
   background: none;
@@ -53,7 +87,7 @@
   margin-top: 10px;
   color: #ff1e1e;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
   text-decoration: none;
   display: flex;
   justify-content: center;

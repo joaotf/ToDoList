@@ -18,6 +18,7 @@ export default class Main extends Component {
   loadStructures = async () => {
     const response = await api.get("/usuario");
     this.setState({ structures: response.data });
+    this.loadStructures();
   };
 
   excludeStructures = async id => {
@@ -26,10 +27,15 @@ export default class Main extends Component {
     this.loadStructures();
   };
 
+  handleAction = (url) => {
+  window.location.href = `https://${url}`
+  }
+
   render() {
     return (
+      
       <div className="list-all">
-        <Link to="/add">Adicionar tarefa!</Link>
+        <Link to="/add"><button id="adding">Adicionar tarefa!</button></Link>
         <br />
         <br />
         {this.state.structures.map(structure => (
@@ -37,14 +43,15 @@ export default class Main extends Component {
             <strong>{structure.title}</strong>
             <p>{structure.description}</p>
             <p>{structure.date}</p>
-            <a href={structure.url}>Acessar</a>
+            <a onClick={() => this.handleAction(structure.url)}>Acessar</a>
+            <Link to={`/update/${structure._id}`}>Editar</Link>
             <button onClick={() => this.excludeStructures(structure._id)}>
               Feito
             </button>
-            <Link to={`/update/${structure._id}`}>Editar</Link>
           </article>
         ))}
       </div>
+    
     );
   }
 }
