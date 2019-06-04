@@ -46,7 +46,7 @@
 
 .list-all article button {
   height: 42px;
-  width: 100px;
+  width: 100%;
   border-radius: 20px;
   border: 2px solid #ff1e1e;
   background: none;
