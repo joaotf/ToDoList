@@ -19,28 +19,32 @@ export default class Storage extends Component {
     alert("Tarefa cadastrada com sucesso!");
   };
 
+  
+
   render() {
     return (
-      <div className="work">
+      <form>
+      <div className="work" >
         <h2 style={{
           color:"#1e90ff"
         }}>Adicionar tarefa</h2>
-        <input id="nome" name="nome" placeholder="Nome" required />
+        <input id="nome" name="nome" placeholder="Nome"  />
         <br />
         <br />
-        <input id="des" name="description" placeholder="Descrição" required />
+        <input id="des" name="description" placeholder="Descrição"  />
         <br />
         <br />
-        <input id="dde" name="dde" placeholder="Data de Entrega" required/>
+        <input id="dde" name="dde" placeholder="Data de Entrega" />
         <br />
         <br />
-        <input id="url" name="url" placeholder="URL" required/>
+        <input id="url" name="url" placeholder="URL"/>
         <br />
         <br />
         <Link to="/" onClick={() => this.createStructure()}>
         <button id="adding">Adicionar</button>
         </Link>
       </div>
+    </form>
     );
   }
 }

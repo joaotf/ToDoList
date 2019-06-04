@@ -33,7 +33,7 @@ html {
   
 }
 .list-all article {
-  background: #881EE6;
+  background: rgba(10, 0, 151, 0.205); 
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
@@ -42,13 +42,13 @@ html {
   text-align: center;
 }
 .list-all article p {
-  font-size: 16px;
+  font-size: 22px;
   color: #000000;
   margin-top: 5px;
   line-height: 24px;
 }
 .list-all article strong {
-  font-size: 25px;
+  font-size: 40px;
   color: #DCDCDC;
   margin-top: 5px;
   line-height: 24px;
@@ -58,9 +58,9 @@ html {
   height: 42px;
   border-radius: 20px;
   border: 2px solid #1e90ff;
-  background: none;
+  background: #1e90ff;
   margin-top: 10px;
-  color: #1e90ff;
+  color: #ffffff;
   display: flex;
   font-weight: bold;
   font-size: 16px;
@@ -83,9 +83,9 @@ html {
   width: 100%;
   border-radius: 20px;
   border: 2px solid #ff1e1e;
-  background: none;
+  background: #ff1e1e;
   margin-top: 10px;
-  color: #ff1e1e;
+  color: #ffffff;
   font-weight: bold;
   font-size: 15px;
   text-decoration: none;

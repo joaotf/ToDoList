@@ -40,7 +40,10 @@ export default class Main extends Component {
         <br />
         {this.state.structures.map(structure => (
           <article key={structure._id}>
-            <strong>{structure.title}</strong>
+            <strong>{structure.title}</strong> 
+            <br />
+            <br />
+            
             <p>{structure.description}</p>
             <p>{structure.date}</p>
             <a onClick={() => this.handleAction(structure.url)}>Acessar</a>
