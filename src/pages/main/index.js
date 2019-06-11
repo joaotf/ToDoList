@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import api from "../../services/api.js";
 
+
 import { Link } from "react-router-dom";
 
 import "./styles.css";
@@ -30,7 +31,7 @@ export default class Main extends Component {
   handleAction = (url) => {
   window.location.href = `https://${url}`
   }
-
+  
   render() {
     return (
       

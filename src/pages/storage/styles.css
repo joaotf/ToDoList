@@ -13,3 +13,18 @@
     align-items: center;
     transition: all 0.2s;
 }
+
+.work input{
+    height: 35px;    
+    border-radius: 10px;
+    border: 2px  #1e90ff;
+    background: #000000;
+    margin-top: 10px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

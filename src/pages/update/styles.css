@@ -1,5 +1,21 @@
-.work #update{
+.update-work input{
+    height: 35px;    
+    border-radius: 10px;
+    border: 2px  #1e90ff;
+    background: #000000;
+    margin-top: 10px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.update-work  button {
     height: 42px;
+    width: 70px;
     border-radius: 20px;
     border: 2px solid #1e90ff;
     background: #000000;
@@ -12,4 +28,5 @@
     justify-content: center;
     align-items: center;
     transition: all 0.2s;
-}
+  }
+
