@@ -9,6 +9,14 @@ export default class Update extends Component {
     structures: []
   };
 
+  loadStructure = async () => {
+    let doidao = window.location.pathname.split("/");
+    let doidao2 = doidao[2];
+
+    const response = await api.get(`/usuario/${doidao2}`)
+    this.setState({ structures:response.data });
+  }
+
   editStructure = async () => {
     let doidao = window.location.pathname.split("/");
     let doidao2 = doidao[2];
@@ -28,16 +36,16 @@ export default class Update extends Component {
         <h2 style={{
           color:"#1e90ff"
         }}>Editar tarefa</h2>
-        <input id="nome" name="nome" placeholder="Nome" />
+        <input id="nome" value={response.title} name="nome" placeholder="Nome" />
         <br />
         <br />
-        <input id="des" name="description" placeholder="Descrição" />
+        <input id="des" value = {response.description} name="description" placeholder="Descrição" />
         <br />
         <br />
-        <input id="dde" name="dde" placeholder="Data de Entrega" />
+        <input id="dde" value={response.date} name="dde" placeholder="Data de Entrega" />
         <br />
         <br />
-        <input id="url" name="url" placeholder="URL" />
+        <input id="url" value={response.url} name="url" placeholder="URL" />
         <br />
         <br />
         <Link to="/" onClick={() => this.editStructure()}>
